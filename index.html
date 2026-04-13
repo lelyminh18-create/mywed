@@ -200,56 +200,56 @@
     </section>
 
     <!-- Booking Form -->
-    <section id="booking" class="py-24 bg-zinc-900">
-        <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Đặt lịch ngay hôm nay</h2>
-            <form id="bookingForm" class="space-y-6 bg-zinc-800 p-10 rounded-3xl">
-                <div class="grid grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm mb-2">Họ tên</label>
-                        <input type="text" id="name" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500" placeholder="Nguyễn Thị A">
-                    </div>
-                    <div>
-                        <label class="block text-sm mb-2">Số điện thoại / Zalo</label>
-                        <input type="tel" id="phone" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500" placeholder="0123456789">
-                    </div>
-                </div>
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 bg-zinc-800 p-10 rounded-3xl">
+    
+    <!-- Access Key đã thay sẵn -->
+    <input type="hidden" name="access_key" value="c345283a-aa09-4c27-bb3d-7e33f8cf074e">
+    <input type="hidden" name="subject" value="🔥 ĐƠN ĐẶT LỊCH MỚI - Boyfriend Rental">
+    <input type="hidden" name="from_name" value="Boyfriend Rental Website">
 
-                <div>
-                    <label class="block text-sm mb-2">Chọn gói</label>
-                    <select id="package" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500">
-                        <option value="Good Boy - 10tr">Good Boy - 10trVNĐ / 4 giờ</option>
-                        <option value="Bad Boy - 12tr">Bad Boy - 12trVNĐ / 4 giờ</option>
-                        <option value="Fuck Boy - 15tr">Fuck Boy - 15trVNĐ / 4 giờ</option>
-                        <option value="Gentleman - 5tr">Gentleman - 5trVNĐ</option>
-                    </select>
-                </div>
-
-                <div class="grid grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm mb-2">Ngày hẹn</label>
-                        <input type="date" id="date" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm mb-2">Giờ bắt đầu</label>
-                        <input type="time" id="time" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-sm mb-2">Địa điểm / Yêu cầu đặc biệt</label>
-                    <textarea id="note" rows="3" class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-4 focus:outline-none focus:border-rose-500" placeholder="Quán cà phê ABC, Quận 1..."></textarea>
-                </div>
-
-                <button type="button" onclick="submitBooking()" 
-                        class="w-full bg-gradient-to-r from-rose-500 to-purple-600 py-7 text-2xl font-bold rounded-3xl hover:scale-105 transition">
-                    XÁC NHẬN ĐẶT LỊCH
-                </button>
-                <p class="text-center text-xs text-zinc-500">Chúng tôi sẽ liên hệ xác nhận trong 15 phút</p>
-            </form>
+    <div class="grid grid-cols-2 gap-6">
+        <div>
+            <label class="block text-sm mb-2">Họ tên *</label>
+            <input type="text" name="hoten" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4" placeholder="Nguyễn Thị A">
         </div>
-    </section>
+        <div>
+            <label class="block text-sm mb-2">Số điện thoại / Zalo *</label>
+            <input type="tel" name="sdt" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4" placeholder="0123456789">
+        </div>
+    </div>
 
+    <div>
+        <label class="block text-sm mb-2">Gói dịch vụ *</label>
+        <select name="goi" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4">
+            <option value="">Chọn gói...</option>
+            <option value="Good Boy - 899k">Good Boy - 899k</option>
+            <option value="Bad Boy - 1.299k">Bad Boy - 1.299k</option>
+            <option value="Fuck Boy - 1.599k">Fuck Boy - 1.599k</option>
+            <option value="Gentleman - 1.8tr">Gentleman - 1.8tr</option>
+        </select>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6">
+        <div>
+            <label class="block text-sm mb-2">Ngày hẹn *</label>
+            <input type="date" name="ngay" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4">
+        </div>
+        <div>
+            <label class="block text-sm mb-2">Giờ hẹn *</label>
+            <input type="time" name="gio" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4">
+        </div>
+    </div>
+
+    <div>
+        <label class="block text-sm mb-2">Địa điểm & Yêu cầu thêm</label>
+        <textarea name="diadiem" rows="3" class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-4" placeholder="Quận 1, Sài Gòn..."></textarea>
+    </div>
+
+    <button type="submit" 
+            class="w-full bg-gradient-to-r from-rose-500 to-purple-600 py-7 text-2xl font-bold rounded-3xl hover:scale-105 transition">
+        XÁC NHẬN ĐẶT LỊCH
+    </button>
+</form>
     <!-- Footer -->
     <footer class="bg-black py-12 border-t border-zinc-800">
         <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500">
