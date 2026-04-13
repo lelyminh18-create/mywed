@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Nhí Store </title>  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+        }
+        .package-card {
+            transition: all 0.4s ease;
+        }
+        .package-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+        }
+        .badge {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-black border-b border-zinc-800 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-heart text-rose-500 text-3xl"></i>
+                <h1 class="text-3xl font-bold tracking-tighter">BOYFRIEND<span class="text-rose-500">RENTAL</span></h1>
+            </div>
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="#" class="hover:text-rose-500 transition">Gói dịch vụ</a>
+                <a href="#" class="hover:text-rose-500 transition">Cách thức</a>
+                <a href="#" class="hover:text-rose-500 transition">Đánh giá</a>
+            </div>
+            <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})"
+                    class="bg-rose-600 hover:bg-rose-700 px-6 py-3 rounded-full font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-bolt"></i>
+                Thuê ngay
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
+                Cần bạn trai đi hẹn?<br>
+                <span class="text-rose-500">Thuê ngay trong 2 giờ!</span>
+            </h2>
+            <p class="text-2xl text-zinc-300 mb-10 max-w-2xl mx-auto">
+                Dịch vụ cung cấp bạn trai giả chuyên nghiệp, kín đáo, an toàn.<br>
+                Phù hợp cho tiệc cưới, gặp gia đình, đi chơi, chụp ảnh...
+            </p>
+            <div class="flex gap-4 justify-center">
+                <button onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'})"
+                        class="bg-white text-black px-10 py-5 rounded-2xl text-xl font-bold hover:bg-amber-400 transition">
+                    Xem gói dịch vụ
+                </button>
+                <button onclick="alert('Hotline: 0123 456 789 (Zalo/Viber)')"
+                        class="border-2 border-white px-10 py-5 rounded-2xl text-xl font-bold hover:bg-white hover:text-black transition">
+                    Liên hệ ngay
+                </button>
+            </div>
+            <div class="mt-12 text-sm text-zinc-400 flex items-center justify-center gap-8">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                    <span>Bảo mật 100%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-amber-400"></i>
+                    <span>Giao hàng trong 2 giờ</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <span>Hơn 500+ khách hàng</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4">Chọn phong cách bạn trai</h2>
+            <p class="text-center text-zinc-400 text-xl mb-16">Mỗi gói đều có kịch bản riêng, outfit chuẩn bị sẵn</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Good Boy -->
+                <div class="package-card bg-zinc-900 rounded-3xl overflow-hidden border border-emerald-500/30">
+                    <div class="h-2 bg-emerald-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="badge inline-block bg-emerald-500 text-black text-sm font-bold px-4 py-1 rounded-full">Phổ biến</span>
+                                <h3 class="text-4xl font-bold mt-4">Good Boy</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-5xl font-bold text-emerald-400">10trVNĐ</span>
+                                <p class="text-sm text-zinc-500">/ 4 giờ</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Dịu dàng, lịch sự</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Giới thiệu với gia đình</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Chụp ảnh couple xịn</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Nhận quà tặng</li>
+                        </ul>
+                        <button onclick="bookPackage('Good Boy', '899000')" 
+                                class="mt-10 w-full bg-emerald-600 hover:bg-emerald-500 py-6 rounded-2xl font-bold text-xl">
+                            Thuê Good Boy
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bad Boy -->
+                <div class="package-card bg-zinc-900 rounded-3xl overflow-hidden border-2 border-rose-500 relative">
+                    <div class="absolute top-6 right-6 bg-rose-500 text-black font-bold px-5 py-1 rounded-full text-sm rotate-12">HOT NHẤT 🔥</div>
+                    <div class="h-2 bg-rose-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-4xl font-bold mt-4">Bad Boy</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-5xl font-bold text-rose-400">12trVNĐ</span>
+                                <p class="text-sm text-zinc-500">/ 4 giờ</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-rose-400"></i> Cá tính, cool ngầu</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-rose-400"></i> Làm crush ghen tị</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-rose-400"></i> Tattoo giả (nếu cần)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-rose-400"></i> Kịch bản drama nhẹ</li>
+                        </ul>
+                        <button onclick="bookPackage('Bad Boy', '1299000')" 
+                                class="mt-10 w-full bg-rose-600 hover:bg-rose-500 py-6 rounded-2xl font-bold text-xl">
+                            Thuê Bad Boy
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fuck Boy -->
+                <div class="package-card bg-zinc-900 rounded-3xl overflow-hidden border border-purple-500/30">
+                    <div class="h-2 bg-purple-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-4xl font-bold mt-4">Fuck Boy</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-5xl font-bold text-purple-400">15trVNĐ</span>
+                                <p class="text-sm text-zinc-500">/ 4 giờ</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Flirt cực mạnh</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Style sexy, quyến rũ</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Thích hợp đi bar/club</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Kịch bản "người yêu cũ"</li>
+                        </ul>
+                        <button onclick="bookPackage('Fuck Boy', '1599000')" 
+                                class="mt-10 w-full bg-purple-600 hover:bg-purple-500 py-6 rounded-2xl font-bold text-xl">
+                            Thuê Fuck Boy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Extra packages -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-zinc-900 p-6 rounded-2xl">
+                    <p class="text-amber-400 font-bold">Gentleman</p>
+                    <p class="text-3xl font-bold mt-1">1.8tr</p>
+                    <p class="text-sm text-zinc-500">Dành cho tiệc sang chảnh</p>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded-2xl">
+                    <p class="text-sky-400 font-bold">Gym Boy</p>
+                    <p class="text-3xl font-bold mt-1">1.4tr</p>
+                    <p class="text-sm text-zinc-500">Body 6 múi</p>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded-2xl">
+                    <p class="text-teal-400 font-bold">Rich Boy</p>
+                    <p class="text-3xl font-bold mt-1">2.5tr</p>
+                    <p class="text-sm text-zinc-500">Xe sang + quà tặng</p>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded-2xl">
+                    <p class="text-pink-400 font-bold">K-pop Boy</p>
+                    <p class="text-3xl font-bold mt-1">1.2tr</p>
+                    <p class="text-sm text-zinc-500">Visual idol</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-24 bg-zinc-900">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Đặt lịch ngay hôm nay</h2>
+            <form id="bookingForm" class="space-y-6 bg-zinc-800 p-10 rounded-3xl">
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm mb-2">Họ tên</label>
+                        <input type="text" id="name" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500" placeholder="Nguyễn Thị A">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-2">Số điện thoại / Zalo</label>
+                        <input type="tel" id="phone" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500" placeholder="0123456789">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2">Chọn gói</label>
+                    <select id="package" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500">
+                        <option value="Good Boy - 10tr">Good Boy - 10trVNĐ / 4 giờ</option>
+                        <option value="Bad Boy - 12tr">Bad Boy - 12trVNĐ / 4 giờ</option>
+                        <option value="Fuck Boy - 15tr">Fuck Boy - 15trVNĐ / 4 giờ</option>
+                        <option value="Gentleman - 5tr">Gentleman - 5trVNĐ</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm mb-2">Ngày hẹn</label>
+                        <input type="date" id="date" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-2">Giờ bắt đầu</label>
+                        <input type="time" id="time" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-rose-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2">Địa điểm / Yêu cầu đặc biệt</label>
+                    <textarea id="note" rows="3" class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-4 focus:outline-none focus:border-rose-500" placeholder="Quán cà phê ABC, Quận 1..."></textarea>
+                </div>
+
+                <button type="button" onclick="submitBooking()" 
+                        class="w-full bg-gradient-to-r from-rose-500 to-purple-600 py-7 text-2xl font-bold rounded-3xl hover:scale-105 transition">
+                    XÁC NHẬN ĐẶT LỊCH
+                </button>
+                <p class="text-center text-xs text-zinc-500">Chúng tôi sẽ liên hệ xác nhận trong 15 phút</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500">
+            <p class="text-2xl font-bold text-white mb-2">BOYFRIEND RENTAL © 2026</p>
+            <p>Dịch vụ thuê bạn trai giả - Hoạt động tại TP.HCM</p>
+            <p class="mt-6 text-xs">Hotline: 0393196280 | Zalo: 0393196280</p>
+            <p class="text-[10px] mt-8">Lưu ý: Đây là dịch vụ giải trí, không vi phạm pháp luật.</p>
+        </div>
+    </footer>
+
+    <script>
+        function bookPackage(name, price) {
+            document.getElementById('package').value = name + " - " + price/1000 + "k";
+            document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function submitBooking() {
+            const name = document.getElementById('name').value;
+            if (!name) {
+                alert("Vui lòng nhập họ tên!");
+                return;
+            }
+            alert(`✅ Đặt lịch thành công!\n\nGói: ${document.getElementById('package').value}\nTên: ${name}\n\nChúng tôi sẽ gọi xác nhận ngay bây giờ. ❤️`);
+            document.getElementById('bookingForm').reset();
+        }
+
+        // Tailwind script đã có
+    </script>
+</body>
+</html>
